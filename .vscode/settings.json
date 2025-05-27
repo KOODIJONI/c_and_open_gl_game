@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "stdio.h": "c",
+        "renderer.h": "c",
+        "gl.h": "c",
+        "stddef.h": "c",
+        "windows.h": "c",
+        "gl_loader.h": "c",
+        "stdbool.h": "c",
+        "matrix_utils.h": "c"
+    }
+}
