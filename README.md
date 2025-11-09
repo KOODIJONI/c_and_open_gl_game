@@ -1,6 +1,6 @@
 # 3D Moottorin kehitys oppimisprojektina
 ## Oppimispäiväkirja
-<img width="1000" height="500" alt="image" src="https://github.com/user-attachments/assets/7f8830ca-94b4-4424-9282-0bbfd3fdae43" />
+<img width="500" height="250" alt="image" src="https://github.com/user-attachments/assets/7f8830ca-94b4-4424-9282-0bbfd3fdae43" />
 
 ###   Johdanto
 Minua on aina kiehtonut, miten 3D - grafiikka toimii ja miten kaksiulotteiselle näytölle voi luoda illuusion kolmannesta ulottuvuudesta. Shaderien, tekstuurien ja 3D-tiedostojen toimintaperiaate oli minulle pitkään mysteeri. Tässä projektissa perehdyn näihin aiheisiin ja rakennan 3D-moottorin C-kielellä tyhjästä käyttäen vain OpenGL-, CJSON- ja stb_image-kirjastoja. 
