@@ -1,3 +1,36 @@
+# 3D Moottorin kehitys oppimisprojektina
+##  Johdanto
+Minua on aina kiehtonut, miten 3D - grafiikka toimii ja miten kaksiulotteiselle näytölle voi luoda illuusion kolmannesta ulottuvuudesta. Shaderien ,tekstuurien ja 3D-tiedostojen toiminta periaate oli myös minulle mysteeri. Tässä projektissa perehdyn näihin asioihin ja rakennan 3D-moottorin tyhjästä hakemistosta, käyttäen vain openGL, CJson ja StbImage kirjastoja.
+
+## Osa 1: Ikkunan luominen openGL kirjastolla ja testi kolmio
+Aloitin projektin luomien ohjelmoimalla openGL kontekstin ja ikkunan main.c tiedostoon. Ja loin renderer.c tiedoston, jossa aloin tekemään logiikkaa. Ensimmäisen grafiikka piirrosta varten.   Koodasin alustavan shaderi ohjelman, joka piirtää suuren keltaisen kolmion näytölle
+
+
+<img width="358" height="333" alt="image" src="https://github.com/user-attachments/assets/b7b51086-1412-461b-a411-640990fbc068" />
+
+## Osa 2: Matriisi operaatiot 
+
+## Osa 3: Kamera ja orbitaalikontrollit
+
+## Osa 4: Shaderien luominen (vertex ja fragment shader)
+
+## Osa 5: 3D tiedostojen lataaminen grafiikka puskuriin
+
+## Osa 6: Ensimmäinen 3D renderöinti
+
+## Osa 7: Scene konfiguraatio tiedosto ja objektien transform matriisit
+
+## Osa 7: Useamman tiedoston lataaminen
+
+## Osa 8: Yksisuuntainen valaistus
+
+## Osa 9: Lamber diffusion
+
+## Osa 10: Tekstuurit
+
+## Osa 11: Taivaslaatikko
+
+
 <img width="1524" height="769" alt="image" src="https://github.com/user-attachments/assets/b525a123-0617-4bc8-8d3e-27cf10a463e1" />
 <img width="1173" height="873" alt="image" src="https://github.com/user-attachments/assets/01f34af0-1827-46d9-abfa-95856a68bcb7" />
 <img width="1900" height="962" alt="image" src="https://github.com/user-attachments/assets/e34ce901-4bbc-42ac-8d20-227e9c6906bb" />
