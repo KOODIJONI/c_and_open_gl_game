@@ -7,6 +7,10 @@
         "windows.h": "c",
         "gl_loader.h": "c",
         "stdbool.h": "c",
-        "matrix_utils.h": "c"
+        "matrix_utils.h": "c",
+        "renderableobject.h": "c",
+        "shader.h": "c",
+        "scene_loader.h": "c",
+        "direct.h": "c"
     }
 }

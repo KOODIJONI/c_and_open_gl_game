@@ -18,11 +18,16 @@ typedef struct {
 
     float* triangle_vertices; 
     size_t triangle_vertex_count;
+
+    float transform[16];
+
+    float color[3]; 
 } ObjMesh;
 
 int LoadOBJ(const char* filename, ObjMesh* mesh);
 void freeMesh(ObjMesh* mesh);
 
 void printVertices(const ObjMesh* mesh);
+void ComputeSmoothNormals(ObjMesh* mesh);
 
 #endif

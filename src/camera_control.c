@@ -44,7 +44,7 @@ void CameraControl_Update(float deltaTime, float* viewMatrix) {
 
     printf("A key (Left) pressed (camera-relative)\n");
     }
-    else if (g_input.keys['D']) {
+     if (g_input.keys['D']) {
         float rotMat[16];
         CreateRotationMatrix(cameraRotation[0], cameraRotation[1], cameraRotation[2], rotMat);
 
@@ -62,7 +62,7 @@ void CameraControl_Update(float deltaTime, float* viewMatrix) {
         printf("D key (Right) pressed (camera-relative)\n");
     }
 
-    else if (g_input.keys['W']) {
+     if (g_input.keys['W']) {
         float rotMat[16];
         CreateRotationMatrix(cameraRotation[0], cameraRotation[1], cameraRotation[2], rotMat); // POSITIVE angles
 
@@ -78,7 +78,7 @@ void CameraControl_Update(float deltaTime, float* viewMatrix) {
 
         printf("W key (Forward) pressed (camera-relative)\n");
     }
-    else if (g_input.keys['S']){
+     if (g_input.keys['S']){
         float rotMat[16];
         CreateRotationMatrix(cameraRotation[0], cameraRotation[1], cameraRotation[2], rotMat);
 
@@ -93,12 +93,12 @@ void CameraControl_Update(float deltaTime, float* viewMatrix) {
 
         printf("W key (Forward) pressed (camera-relative)\n");
     }
-    else if(g_input.keys[VK_UP]) {
-        cameraPosition[2] += speed* deltaTime;
+     if(g_input.keys[VK_SPACE]) {
+        cameraPosition[1] += speed* deltaTime;
         printf("Up key pressed\n");
     }
-    else if(g_input.keys[VK_DOWN]) {
-        cameraPosition[2] -= speed  * deltaTime;
+     if(g_input.keys[VK_CONTROL]) {
+        cameraPosition[1] -= speed  * deltaTime;
         printf("Down key pressed\n");
     }
     static int lastMouseX = 0, lastMouseY = 0;
@@ -120,6 +120,7 @@ void CameraControl_Update(float deltaTime, float* viewMatrix) {
 
     // Update last position for the next frame
     lastMouseX = mouseX;
+    
     lastMouseY = mouseY;
 
 
@@ -131,7 +132,6 @@ void CameraControl_Update(float deltaTime, float* viewMatrix) {
 
     CreateTranslationMatrix(-cameraPosition[0], -cameraPosition[1], -cameraPosition[2], translation);
     CreateRotationMatrix(-cameraRotation[0], -cameraRotation[1], -cameraRotation[2], rotation);
-    //MultiplyMatrices(rotation, translation, viewMatrix);
     MultiplyMatrices(translation, rotation, viewMatrix);
 }
 

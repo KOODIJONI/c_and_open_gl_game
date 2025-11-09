@@ -1,16 +1,25 @@
 #version 330 core
 
 uniform mat4 uProjection;
-uniform mat4 uModel;
 uniform mat4 uView;
-layout(location = 0) in vec3 aPos;     // vertex position
-layout(location = 1) in vec3 aColor;   // vertex color
+uniform mat4 uModel;
 
-out vec3 vertexColor;  // pass to fragment shader
+layout(location = 0) in vec3 aPos;
+layout(location = 1) in vec3 aNormal;
+layout(location = 2) in vec3 aColor;
+
+out vec3 fragPos;    // world-space position
+out vec3 fragNormal; // world-space normal
+out vec3 fragColor;
 
 void main() {
-   
-    gl_Position = uProjection *uView* uModel * vec4(aPos, 1.0);
-    vertexColor = aColor;
-    
+    vec4 worldPos = uModel * vec4(aPos, 1.0);
+    fragPos = worldPos.xyz;
+
+    mat3 normalMatrix = transpose(inverse(mat3(uModel)));
+    fragNormal = normalize(normalMatrix * aNormal);
+
+    fragColor = aColor;
+
+    gl_Position = uProjection * uView * worldPos;
 }
