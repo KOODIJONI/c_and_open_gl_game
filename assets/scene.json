@@ -6,7 +6,8 @@
       "position": [100.0, -79.0, -350.00],
       "rotation": [0.0, 0.0, 0.0],
       "scale": [0.3, 0.3, 0.3],
-      "textures": "assets/object1/textures/OilDrum_BaseColor.png"
+      "textures": "assets/object1/textures/OilDrum_BaseColor.png",
+      "shadows": true
     },
     {
       "folder": "assets/cartoon_building",
@@ -14,7 +15,8 @@
       "position": [-100.0, -90.0, -350.0],
       "rotation": [0.0, -1.57, 0.0],
       "scale": [2.0, 2.0, 2.0],
-      "textures": "assets/cartoon_building/textures/cartoon_building_Albedo.png"
+      "textures": "assets/cartoon_building/textures/cartoon_building_Albedo.png",
+      "shadows": true
     },
     {
       "folder": "assets/Road/ROAD",
@@ -22,7 +24,17 @@
       "position": [0.0, 1000.0, 0.0],
       "rotation": [0.0, 0.0, 0.0],
       "scale": [3.0, 3.0, 3.0],
-      "textures": "assets/ROAD/ROAD/ROAD.JPG"
+      "textures": "assets/ROAD/ROAD/ROAD.JPG",
+      "shadows": true
+    },
+    {
+      "folder": "assets/skybox",
+      "mesh": "assets/skybox/skybox.obj",
+      "position": [0.0, 0.0, 0.0],
+      "rotation": [0.0, 1.57, 0.0],
+      "scale": [5000.0, 5000.0, 5000.0],
+      "textures": "assets/skybox/textures/skybox.jpeg",
+      "shadows": false
     }
     
   ]

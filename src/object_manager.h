@@ -1,12 +1,14 @@
 #pragma once
 #include <GL/gl.h>
 #include <stddef.h>
-
+#include <stdbool.h>
 typedef struct {
     GLuint vao;
     int vertexCount;
     float modelMatrix[16];
     GLuint textureID;
+    bool castsShadows;
+
 } RenderableObject;
 
 typedef struct {

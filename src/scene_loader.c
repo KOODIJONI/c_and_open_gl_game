@@ -112,8 +112,17 @@ void LoadSceneFromFile(const char* filename, ObjectVector* objects) {
         float trans[16];
         CreateTranslationMatrix(pos->child->valuedouble, pos->child->next->valuedouble, pos->child->next->next->valuedouble, trans);
         MultiplyMatrices(model, trans, model);
-
+        cJSON* shadows = cJSON_GetObjectItem(objItem, "shadows");
+        
         RenderableObject obj;
+        if (shadows && shadows->type == cJSON_True) {
+            obj.castsShadows = 1;
+            printf("Object %d will cast shadows.\n", i);
+
+        } else {
+            printf("Object %d will NOT cast shadows.\n", i);
+            obj.castsShadows = 0;
+        }
         obj.vao = vao;
         obj.vertexCount = mesh.triangle_vertex_count;
         obj.textureID = mesh.textureID;

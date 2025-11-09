@@ -36,7 +36,7 @@ static float* treeVertices = NULL;
 static GLint uniformProjectionLoc = -1;
 static GLint uniformModelLoc = -1;
 static GLint uniformViewLoc = -1;
-
+static GLint uniformCastsShadowsLoc = -1;
 float projectionMatrix[16];
 float viewMatrix[16];
 
@@ -81,6 +81,7 @@ void Renderer_Init(void) {
     uniformProjectionLoc = ShaderManager_GetUniformLocation(shaderProgram, "uProjection");
     uniformViewLoc       = ShaderManager_GetUniformLocation(shaderProgram, "uView");
     uniformModelLoc      = ShaderManager_GetUniformLocation(shaderProgram, "uModel");
+    uniformCastsShadowsLoc = glGetUniformLocation(shaderProgram, "uCastsShadows");
 
     GLint uTextureLoc = glGetUniformLocation(shaderProgram, "uTexture");
 
@@ -106,6 +107,7 @@ void DrawObject(GLuint vao, int vertexCount, float* modelMatrix, GLuint textureI
        glEnable(GL_TEXTURE_2D);
         glBindTexture(GL_TEXTURE_2D, textureID);
     }
+    
 
     glDrawArrays(GL_TRIANGLES, 0, vertexCount); // Or glDrawElements if using EBO
 
@@ -136,6 +138,9 @@ void Renderer_Draw(float deltaTime) {
     // Draw all objects in the vector
     for (int i = 0; i < objects.size; i++) {
         RenderableObject* obj = &objects.data[i];
+        if (uniformCastsShadowsLoc != -1) {
+            glUniform1i(uniformCastsShadowsLoc, obj->castsShadows ? 1 : 0);
+        }
         DrawObject(obj->vao, obj->vertexCount, obj->modelMatrix,obj->textureID);
     }
 }

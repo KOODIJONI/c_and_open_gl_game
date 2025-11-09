@@ -28,6 +28,7 @@ extern PFNGLGETPROGRAMINFOLOGPROC      glGetProgramInfoLog;
 extern PFNGLDELETEVERTEXARRAYSPROC     glDeleteVertexArrays;
 extern PFNGLDELETEPROGRAMPROC          glDeleteProgram;
 extern PFNGLDELETESHADERPROC           glDeleteShader;
+extern PFNGLUNIFORM1IPROC              glUniform1i;
 
 // Loader function
 void LoadGLFunctions(void);

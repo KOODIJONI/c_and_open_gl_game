@@ -29,6 +29,7 @@ PFNGLGETPROGRAMINFOLOGPROC      glGetProgramInfoLog = NULL;
 PFNGLDELETEVERTEXARRAYSPROC     glDeleteVertexArrays = NULL;
 PFNGLDELETEPROGRAMPROC          glDeleteProgram = NULL;
 PFNGLDELETESHADERPROC           glDeleteShader = NULL;
+PFNGLUNIFORM1IPROC              glUniform1i = NULL;
 
 #define LOAD_GL_FUNC(type, name)                     \
     name = (type)wglGetProcAddress(#name);           \
@@ -63,6 +64,8 @@ void LoadGLFunctions(void) {
     LOAD_GL_FUNC(PFNGLDELETEVERTEXARRAYSPROC,     glDeleteVertexArrays);
     LOAD_GL_FUNC(PFNGLDELETEPROGRAMPROC,          glDeleteProgram);
     LOAD_GL_FUNC(PFNGLDELETESHADERPROC,           glDeleteShader);
+    LOAD_GL_FUNC(PFNGLUNIFORM1IPROC, glUniform1i);
+
 
     printf("All OpenGL functions loaded successfully.\n");
 }
