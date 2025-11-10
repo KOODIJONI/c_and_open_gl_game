@@ -1,5 +1,7 @@
 # 3D Moottorin kehitys oppimisprojektina
 ## Oppimispäiväkirja
+<img width="500" height="250" alt="image" src="https://github.com/user-attachments/assets/ef4e2841-ec8a-4b56-8d1a-86a2cb0db14b" />
+
 <img width="500" height="250" alt="image" src="https://github.com/user-attachments/assets/7f8830ca-94b4-4424-9282-0bbfd3fdae43" />
 
 ###   Johdanto
@@ -148,8 +150,10 @@ Tämän ansiosta 3D-mallien valaistus näyttää pehmeämmältä ja luonnollisem
 
 ### Osa 8: Taivaslaatikko ja ambientlight
 Lopuksi loin taivaslaatikon, joka on periaatteessa pallo, jonka sisällä on taivaan tekstuuri. Koodasin logiikan, että taivaslaatikkoon ei tule varjoja ja lisäsin ympäristön valaistusta ja lopputulos oli upea.
+<img width="1467" height="966" alt="image" src="https://github.com/user-attachments/assets/1741ee2d-6201-4429-9704-d6846e168b96" />
 
 <img width="1907" height="981" alt="image" src="https://github.com/user-attachments/assets/7f8830ca-94b4-4424-9282-0bbfd3fdae43" />
+<img width="1467" height="966" alt="image" src="https://github.com/user-attachments/assets/516bea8b-c07e-427b-9d13-ffa1bb30a562" />
 
 
 ### Lopputulos
